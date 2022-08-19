@@ -22,6 +22,7 @@ public class RecipeManager {
     private GoldenHead goldenHeadFile;
 
     // TODO: need to make separate recipes for recipes that are shaped but can be crafted in multiple ways (vorpal sword)
+    // TODO: make all items extend BaseItem incase we need any generics in the future
     public RecipeManager(Main mainReference) {
         this.mainReference = mainReference;
 
@@ -38,6 +39,7 @@ public class RecipeManager {
         goldenHeadFile = new GoldenHead(mainReference);
         VorpalSword vorpalSwordFile = new VorpalSword(mainReference);
         SharpnessBook sharpnessBookFile = new SharpnessBook(mainReference);
+        PowerBook powerBookFile = new PowerBook(mainReference);
         LightAnvil lightAnvilFile = new LightAnvil(mainReference);
 
         // Extra ultimates
@@ -58,6 +60,7 @@ public class RecipeManager {
         BasicCustomRecipe goldenHead = new BasicCustomRecipe(goldenHeadFile.getMaterials(), goldenHeadFile.returnItem(), "golden-head-recipe", 4);
         BasicCustomRecipe vorpalSword = new BasicCustomRecipe(vorpalSwordFile.getMaterials(), vorpalSwordFile.returnItem(), "vorpal-sword-recipe", 4);
         BasicCustomRecipe sharpnessBook = new BasicCustomRecipe(sharpnessBookFile.getMaterials(), sharpnessBookFile.returnItem(), "sharp-book-recipe", 4);
+        BasicCustomRecipe powerBook = new BasicCustomRecipe(powerBookFile.getMaterials(), powerBookFile.returnItem(), "power-book-recipe", 4);
         BasicCustomRecipe lightAnvil = new BasicCustomRecipe(lightAnvilFile.getMaterials(), lightAnvilFile.returnItem(), "light-anvil-recipe", 4);
 
     }
