@@ -1,0 +1,15 @@
+name: UltraHardCore
+version: 1.0
+main: me.dimqnd.UltraHardCore.Main
+author: dimqnd
+api-version: 1.18
+commands:
+  ping:
+    description: Check if the plugin is working appropriately!
+    usage: /<command>
+  createnpc:
+    description: (devs only) create an npc
+    usage: /<command>
+  deletenpc:
+    description: (devs only) delete an npc
+    usage: /<command>
