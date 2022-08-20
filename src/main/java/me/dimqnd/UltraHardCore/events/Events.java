@@ -63,14 +63,16 @@ public class Events implements Listener {
         deathLocation.getWorld().dropItem(deathLocation, item);
     }
 
-    // TODO: make exclusive to custom heads
     // TODO: Need to create a few functions in this events file because it's messy
     @EventHandler
     public void onBlockPlace(BlockPlaceEvent e) {
-        if (e.getBlockPlaced().getType() == Material.PLAYER_HEAD ||
-                e.getBlockPlaced().getType() == Material.PLAYER_WALL_HEAD) {
-            e.setCancelled(true);
-        }
+        String itemTag = e.getItemInHand().getItemMeta().getPersistentDataContainer().get(
+                new NamespacedKey(mainReference, "custom-item-type"), PersistentDataType.STRING
+        );
+
+        if (itemTag == null) return;
+        if (!itemTag.equals("player-head") && !itemTag.equals("golden-head")) return;
+        e.setCancelled(true);
 
     }
 
@@ -219,8 +221,7 @@ public class Events implements Listener {
         }
     }
 
-    // TODO: Next items, Hermes' boots and dragon sword
-    // TODO: a demonstration of how to create a light anvil or book of protection
+
     @EventHandler
     public void onPlayerPVP(EntityDamageByEntityEvent e) {
         if (!(e.getEntity() instanceof Player)) return;
@@ -240,6 +241,28 @@ public class Events implements Listener {
                 .equals("exodus")) return;
 
         ePlayer.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 3 * 20, 1, false, false));
+    }
+
+    @EventHandler
+    public void onInventoryClick(InventoryClickEvent e) {
+        if (!(e.getWhoClicked() instanceof Player)) return;
+        Player player = (Player) e.getWhoClicked();
+
+        player.sendMessage("test1");
+        ItemStack playerHelmet = player.getInventory().getHelmet();
+        if (playerHelmet == null) return;
+        player.sendMessage("test2");
+
+        String playerHelmetTag = playerHelmet.getItemMeta().getPersistentDataContainer().get(
+                new NamespacedKey(mainReference, "custom-item-type"), PersistentDataType.STRING
+        );
+        if (playerHelmetTag == null) return;
+        player.sendMessage("test3");
+        player.sendMessage(playerHelmetTag);
+        if (!playerHelmetTag.equals("player-head") && !playerHelmetTag.equals("golden-head")) return;
+
+        player.sendMessage("test4");
+        e.setCancelled(true);
     }
 
 }
