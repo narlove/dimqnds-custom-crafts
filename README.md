@@ -5,6 +5,7 @@
 - Minecraft version: 1.18.2
 - API: Spigot
 - Author: Dimqnd (Dimqnd#4844)
+- Todo list link: https://trello.com/b/epkahAgi
 ## Items and their descriptions
 ### Hypixel Items
 - Anduril ~ Iron sword that provides resistance and speed while holding
@@ -19,4 +20,5 @@
 - Tarnhelm ~ A protection diamond helment
 - Vorpal Sword - A looting iron sword
 ### Custom Items
-- Nothing just yet!
+- Your **OWN** custom items? Coming soon...
+- Link to add your own item (prefilled with an Axe of Perun example): shorturl.at/DIMN7
