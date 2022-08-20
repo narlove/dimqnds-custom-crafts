@@ -21,3 +21,4 @@
 - Vorpal Sword - A looting iron sword
 ### Custom Items
 - Your **OWN** custom items? Coming soon...
+- Link to add your own item (prefilled with an Axe of Perun example): https://rb.gy/atlgdx
