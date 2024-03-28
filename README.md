@@ -6,7 +6,7 @@ DATE: 21/08/2022
 - Minecraft version: 1.18.2
 - API: Spigot
 - Author: Dimqnd (Dimqnd#4844)
-- Todo list link: https://trello.com/b/epkahAgi
+- Todo list link: \[removed in deprecation\]
 ## Items and their descriptions
 ### Hypixel Items
 - Anduril ~ Iron sword that provides resistance and speed while holding
@@ -20,6 +20,3 @@ DATE: 21/08/2022
 - Quick Pick ~ An efficiency iron pickaxe
 - Tarnhelm ~ A protection diamond helment
 - Vorpal Sword - A looting iron sword
-### Custom Items
-- Your **OWN** custom items? Coming soon...
-- Link to add your own item (prefilled with an Axe of Perun example): shorturl.at/DIMN7
